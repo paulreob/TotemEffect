@@ -1,0 +1,6 @@
+name: TotemEffect
+version: ${project.version}
+main: me.paulreob.totemeffect.Main
+api-version: 1.16
+authors: [paulreob]
+description: Plugin to make the totem effect appear with a specified CustomModelData
