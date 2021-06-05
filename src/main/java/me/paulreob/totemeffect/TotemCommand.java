@@ -14,7 +14,7 @@ public class TotemCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, @NotNull String[] args) {
         String totemprefix = ChatColor.GOLD + "" + ChatColor.BOLD + "TotemEffect" + ChatColor.DARK_GRAY + " ¦ " + ChatColor.RESET;
 
-        if(!sender.hasPermission("tottemeffect.use")) {
+        if(!sender.hasPermission("totemeffect.use")) {
             sender.sendMessage(totemprefix + "Insufficient Permissions");
             return true;
         }
