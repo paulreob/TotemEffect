@@ -37,6 +37,7 @@ public class Main extends JavaPlugin implements Listener {
         }
 
         player.getInventory().setItemInMainHand(mainHand);
+        player.stopSound(Sound.ITEM_TOTEM_USE, SoundCategory.PLAYERS);
 
 
     }
