@@ -95,6 +95,10 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>jeff-media-gbr</id>
+            <url>https://repo.jeff-media.de/maven2</url>
+        </repository>
     </repositories>
 
     <dependencies>
