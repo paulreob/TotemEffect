@@ -1,6 +1,8 @@
 package me.paulreob.totemeffect;
 
 import org.bukkit.Material;
+import org.bukkit.Sound;
+import org.bukkit.SoundCategory;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
@@ -19,6 +21,7 @@ public class Main extends JavaPlugin implements Listener {
         totem.setItemMeta(meta);
         final ItemStack mainHand = player.getInventory().getItemInMainHand().clone();
         player.getInventory().setItemInMainHand(totem);
+        player.stopSound(Sound.ITEM_TOTEM_USE, SoundCategory.PLAYERS);
 
         try {
             final Class<?> statusPacketClass = NMSUtils.getNMSClass("PacketPlayOutEntityStatus");
