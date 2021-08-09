@@ -1,6 +1,5 @@
 package me.paulreob.totemeffect;
 
-import de.jeff_media.jefflib.thirdparty.org.jetbrains.annotations.NotNull;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -11,11 +10,11 @@ import org.bukkit.entity.Player;
 public class TotemCommand implements CommandExecutor {
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, @NotNull String[] args) {
-        String totemprefix = ChatColor.GOLD + "" + ChatColor.BOLD + "TotemEffect" + ChatColor.DARK_GRAY + " ¦ " + ChatColor.RESET;
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        String totemprefix = ChatColor.translateAlternateColorCodes('&', "&6TotemEffect  ¦ &r");
 
-        if(!sender.hasPermission("totemeffect.use")) {
-            sender.sendMessage(totemprefix + "Insufficient Permissions");
+        if(!sender.hasPermission("tottemeffect.use")) {
+            sender.sendMessage(totemprefix + ChatColor.RED + "Insufficient Permissions");
             return true;
         }
         if (args.length != 2) {
