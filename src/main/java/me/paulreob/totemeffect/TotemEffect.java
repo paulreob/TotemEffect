@@ -9,10 +9,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.paulreob.totemeffect.Commands.TotemCommand;
+import me.paulreob.totemeffect.Utils.NMSUtils;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
-public class Main extends JavaPlugin implements Listener {
+public class TotemEffect extends JavaPlugin implements Listener {
 
     public static void playCustomTotemAnimation(final Player player, final int customModelData) {
         final ItemStack totem = new ItemStack(Material.TOTEM_OF_UNDYING);
@@ -48,6 +51,7 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getCommand("totemeffect").setExecutor(new TotemCommand());
+        getLogger().info("Plugin enabled (Totemeffect) by PauXD");
     }
 
 

@@ -8,6 +8,21 @@
     <artifactId>TotemEffect</artifactId>
     <version>1.0.0</version>
 
+        <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Pau</name>
+            <email>git@Pau.com</email>
+            <url>https://github.com/xIsm4</url>
+        </developer>
+    </developers>
+
     <properties>
         <spigot.prefix>${project.name}</spigot.prefix>
         <spigot.main>me.paulreob.totemtest.Main</spigot.main>
@@ -92,15 +107,15 @@
 
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>papermc</id>
+            <url>https://papermc.io/repo/repository/maven-public/</url>
         </repository>
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
             <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>

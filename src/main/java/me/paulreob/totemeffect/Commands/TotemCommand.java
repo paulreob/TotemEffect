@@ -1,4 +1,4 @@
-package me.paulreob.totemeffect;
+package me.paulreob.totemeffect.Commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -6,6 +6,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import me.paulreob.totemeffect.TotemEffect;
 
 public class TotemCommand implements CommandExecutor {
 
@@ -36,7 +38,7 @@ public class TotemCommand implements CommandExecutor {
             return true;
         }
 
-        Main.playCustomTotemAnimation(player, customModelData);
+        TotemEffect.playCustomTotemAnimation(player, customModelData);
 
         return true;
     }
